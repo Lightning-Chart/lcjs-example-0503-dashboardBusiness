@@ -27,11 +27,11 @@ The dashboard grid is created with 4 rows and 2 columns. Some visualization comp
     ```javascript
     // Create XY chart and attach to the dashboard.
     const barChart = dashboard.createChartXY({
-    columnIndex: 2,
-    rowIndex: 0,
-    columnSpan: 2,
-    rowSpan: 1
-})
+        columnIndex: 2,
+        rowIndex: 0,
+        columnSpan: 2,
+        rowSpan: 1
+    })
 
     // Add segment series to series individual line segments.
     // This series uses default axes.
@@ -64,11 +64,11 @@ The dashboard grid is created with 4 rows and 2 columns. Some visualization comp
     ```javascript
     // Create UI panel and attach to the dashboard.
     const panel = dashboard.createUIPanel({
-    columnIndex: 3,
-    rowIndex: 1,
-    columnSpan: 1,
-    rowSpan: 1
-})
+        columnIndex: 3,
+        rowIndex: 1,
+        columnSpan: 1,
+        rowSpan: 1
+    })
 
     // Add UI element specifying the builder.
     // E.g. CheckBox, Button, Legend, etc.
