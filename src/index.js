@@ -1,4 +1,4 @@
-/**
+/*
  * LightningChartJS example that showcases a business-like-Dashboard.
  */
 // Import LightningChartJS
@@ -26,7 +26,7 @@ const {
 
 // Create styles for normal & selected graphs.
 const palette = ColorPalettes.arctionWarm(2)
-const mainStrokeStyle = new SolidLine().setFillStyle(new SolidFill().setColor(palette(0))).setThickness(20)
+const mainStrokeStyle = new SolidLine().setFillStyle(new SolidFill().setColor(palette(0))).setThickness(20 / window.devicePixelRatio)
 const selectedFillStyle = new SolidFill().setColor(palette(1))
 
 // Department names 
@@ -242,7 +242,7 @@ totalBudgetsPerTeam.then(teamCosts => {
             // Modify TextBox builder to style the text field
             .addStyler(textBox => textBox
                 // Define font settings for the text box
-                .setFont(fontSettings => fontSettings.setSize(75))
+                .setFont(fontSettings => fontSettings.setSize(75 / window.devicePixelRatio))
                 // Define content of the text box
                 .setText('$' + teamCosts.reduce((sum, cost) => sum + cost, 0).toFixed())
             )
@@ -254,7 +254,7 @@ totalBudgetsPerTeam.then(teamCosts => {
         UIElementBuilders.TextBox
             // Modify TextBox builder to style the text field
             .addStyler(textBox => textBox
-                .setFont(fontSettings => fontSettings.setSize(25))
+                .setFont(fontSettings => fontSettings.setSize(25 / window.devicePixelRatio))
                 .setText("Total company expenses")
             )
     )
