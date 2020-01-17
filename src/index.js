@@ -132,13 +132,13 @@ const dateTimeTickStrategy = AxisTickStrategies.DateTime(dateOrigin)
 
 // Create chart for a single department costs distribution graph
 const lineChart = db.createChartXY({
-    columnIndex: 0, 
-    rowIndex: 2, 
-    columnSpan: 2, 
-    rowSpan: 1, 
+    columnIndex: 0,
+    rowIndex: 2,
+    columnSpan: 2,
+    rowSpan: 1,
     chartXYOptions: { defaultAxisXTickStrategy: dateTimeTickStrategy }
 })
-    .setPadding({right:40})
+    .setPadding({ right: 40 })
 // Set the row height for the third row to take 50% of view space.
 db.setRowHeight(2, 2)
 // Create simple line series 
@@ -264,10 +264,10 @@ totalBudgetsPerTeam.then(teamCosts => {
 const totalCostsChart = db
     // Create a cartesian chart
     .createChartXY({
-        columnIndex: 1, 
-        rowIndex: 1, 
-        columnSpan: 1, 
-        rowSpan: 1, 
+        columnIndex: 1,
+        rowIndex: 1,
+        columnSpan: 1,
+        rowSpan: 1,
         chartXYOptions: { defaultAxisXTickStrategy: dateTimeTickStrategy }
     })
     // Specify ChartXY title
