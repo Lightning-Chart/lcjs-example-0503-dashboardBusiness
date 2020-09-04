@@ -117,25 +117,25 @@ The dashboard grid is created with 4 rows and 2 columns. Some visualization comp
 
 ## API Links
 
-* Dashboard: [Dashboard]
-* XY cartesian chart: [ChartXY]
-* Axis: [Axis]
-* Axis tick strategies: [AxisTickStrategies]
-* cursor modes: [AutoCursorModes]
-* Segment series: [SegmentSeries]
-* Freeform line series: [LineSeries]
-* Spline series: [SplineSeries]
-* Custom tick: [CustomTick]
-* Solid LineStyle: [SolidLine]
-* Empty LineStyle: [emptyLine]
-* Solid FillStyle: [SolidFill]
-* Empty FillStyle: [emptyFill]
-* Empty TickStyle: [emptyTick]
-* Color palettes: [ColorPalettes]
-* UI Panel: [UIPanel]
-* UI Layout builders: [UILayoutBuilders]
-* UI Elements builders: [UIElementBuilders]
-* Font settings: [FontSettings]
+* [Dashboard]
+* [XY cartesian chart]
+* [Axis]
+* [Axis tick strategies]
+* [cursor modes]
+* [Segment series]
+* [Freeform line series]
+* [Spline series]
+* [Custom tick]
+* [Solid LineStyle]
+* [Empty LineStyle]
+* [Solid FillStyle]
+* [Empty FillStyle]
+* [Empty TickStyle]
+* [Color palettes]
+* [UI Panel]
+* [UI Layout builders]
+* [UI Elements builders]
+* [Font settings]
 
 
 ## Support
@@ -159,23 +159,23 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © Arction Ltd 2009-2020. All rights reserved.
 
 
-[Dashboard]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/dashboard.html
-[ChartXY]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/chartxy.html
-[Axis]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/axis.html
-[AxisTickStrategies]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/globals.html#axistickstrategies
-[AutoCursorModes]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/enums/autocursormodes.html
-[SegmentSeries]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/segmentseries.html
-[LineSeries]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/lineseries.html
-[SplineSeries]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/splineseries.html
-[CustomTick]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/customtick.html
-[SolidLine]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/solidline.html
-[emptyLine]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/globals.html#emptyline
-[SolidFill]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/solidfill.html
-[emptyFill]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/globals.html#emptyfill
-[emptyTick]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/globals.html#emptytick
-[ColorPalettes]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/globals.html#colorpalettes
-[UIPanel]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/uipanel.html
-[UILayoutBuilders]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/globals.html#uilayoutbuilders
-[UIElementBuilders]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/globals.html#uielementbuilders
-[FontSettings]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/fontsettings.html
+[Dashboard]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/dashboard.html
+[XY cartesian chart]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/chartxy.html
+[Axis]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/axis.html
+[Axis tick strategies]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/globals.html#axistickstrategies
+[cursor modes]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/enums/autocursormodes.html
+[Segment series]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/segmentseries.html
+[Freeform line series]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/lineseries.html
+[Spline series]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/splineseries.html
+[Custom tick]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/customtick.html
+[Solid LineStyle]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/solidline.html
+[Empty LineStyle]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/globals.html#emptyline
+[Solid FillStyle]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/solidfill.html
+[Empty FillStyle]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/globals.html#emptyfill
+[Empty TickStyle]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/globals.html#emptytick
+[Color palettes]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/globals.html#colorpalettes
+[UI Panel]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/uipanel.html
+[UI Layout builders]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/globals.html#uilayoutbuilders
+[UI Elements builders]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/globals.html#uielementbuilders
+[Font settings]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/fontsettings.html
 

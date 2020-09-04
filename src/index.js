@@ -15,9 +15,10 @@ const {
     AutoCursorModes,
     AxisTickStrategies,
     emptyLine,
-    emptyTick,
     emptyFill,
-    AxisScrollStrategies
+    AxisScrollStrategies,
+    ColorRGBA,
+    Themes
 } = lcjs
 
 const {
@@ -54,6 +55,7 @@ const budgets = Promise.all(
 
 // Create dashboard which will host all chart and UI elements
 const db = lightningChart().Dashboard({
+    // theme: Themes.dark 
     numberOfRows: 3,
     numberOfColumns: 2
 })
@@ -87,7 +89,7 @@ const axisXSize = axisX.scale.getCellSize()
 // Modify X axis
 axisX
     // Disable default ticks.
-    .setTickStyle(emptyTick)
+    .setTickStrategy(AxisTickStrategies.Empty)
     // Disable mouse interactions
     .setMouseInteractions(false)
     // Set correct range, so that is in pixel coordinates
@@ -96,7 +98,9 @@ axisX
     .setScrollStrategy(undefined)
 
 // Modify Y axis
-barChart.getDefaultAxisY().setTitle('Expenses ($)')
+barChart
+    .getDefaultAxisY()
+    .setTitle('Expenses ($)')
     .setStrokeStyle(style => style.setThickness(0))
     .setNibStyle(emptyLine)
     .setMouseInteractions(false)
@@ -119,7 +123,9 @@ const customTicks = teams.map((team, i) => axisX
         // Change stroke style
         .setBackground(background => background
             .setStrokeStyle(emptyLine)
+            .setFillStyle(emptyFill)
         )
+        .setTextFillStyle(new SolidFill({ color: ColorRGBA(170, 170, 170) }))
     )
     // Disable gridstroke.
     .setGridStrokeStyle(emptyLine)
@@ -128,15 +134,13 @@ const customTicks = teams.map((team, i) => axisX
 
 // Decide on an origin for DateTime axes (shared between two charts).
 const dateOrigin = new Date(2018, 0, 1)
-const dateTimeTickStrategy = AxisTickStrategies.DateTime(dateOrigin)
 
 // Create chart for a single department costs distribution graph
 const lineChart = db.createChartXY({
     columnIndex: 0,
     rowIndex: 2,
     columnSpan: 2,
-    rowSpan: 1,
-    chartXYOptions: { defaultAxisXTickStrategy: dateTimeTickStrategy }
+    rowSpan: 1
 })
     .setPadding({ right: 40 })
 // Set the row height for the third row to take 50% of view space.
@@ -147,6 +151,13 @@ const lineSeries = lineChart
     .setName('Total Expenses')
     // Set selected fill color for the series
     .setStrokeStyle((style) => style.setFillStyle(selectedFillStyle))
+
+lineChart
+    .getDefaultAxisX()
+    .setTickStrategy(
+        AxisTickStrategies.DateTime,
+        (tickStrategy) => tickStrategy.setDateOrigin(dateOrigin)
+    )
 
 // Style chart selected department costs distribution
 budgets.then(
@@ -267,12 +278,18 @@ const totalCostsChart = db
         columnIndex: 1,
         rowIndex: 1,
         columnSpan: 1,
-        rowSpan: 1,
-        chartXYOptions: { defaultAxisXTickStrategy: dateTimeTickStrategy }
+        rowSpan: 1
     })
     // Specify ChartXY title
     .setTitle('Total expenses per day')
     .setPadding({ right: 40 })
+
+totalCostsChart
+    .getDefaultAxisX()
+    .setTickStrategy(
+        AxisTickStrategies.DateTime,
+        (tickStrategy) => tickStrategy.setDateOrigin(dateOrigin)
+    )
 
 const totalCost = totalCostsChart
     // Add the smooth line
