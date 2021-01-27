@@ -159,23 +159,23 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © Arction Ltd 2009-2020. All rights reserved.
 
 
-[Dashboard]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/classes/dashboard.html
-[XY cartesian chart]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/classes/chartxy.html
-[Axis]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/classes/axis.html
-[Axis tick strategies]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/globals.html#axistickstrategies
-[Auto cursor modes]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/enums/autocursormodes.html
-[Segment series]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/classes/segmentseries.html
-[Freeform line series]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/classes/lineseries.html
-[Spline series]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/classes/splineseries.html
-[Custom tick]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/classes/customtick.html
-[Solid LineStyle]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/classes/solidline.html
-[Empty LineStyle]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/globals.html#emptyline
-[Solid FillStyle]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/classes/solidfill.html
-[Empty FillStyle]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/globals.html#emptyfill
-[Empty TickStyle]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/globals.html#emptytick
-[Color palettes]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/globals.html#colorpalettes
-[UI Panel]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/classes/uipanel.html
-[UI Layout builders]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/globals.html#uilayoutbuilders
-[UI Elements builders]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/globals.html#uielementbuilders
-[Font settings]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/classes/fontsettings.html
+[Dashboard]: https://www.arction.com/lightningchart-js-api-documentation/v2.2.0/classes/dashboard.html
+[XY cartesian chart]: https://www.arction.com/lightningchart-js-api-documentation/v2.2.0/classes/chartxy.html
+[Axis]: https://www.arction.com/lightningchart-js-api-documentation/v2.2.0/classes/axis.html
+[Axis tick strategies]: https://www.arction.com/lightningchart-js-api-documentation/v2.2.0/globals.html#axistickstrategies
+[Auto cursor modes]: https://www.arction.com/lightningchart-js-api-documentation/v2.2.0/enums/autocursormodes.html
+[Segment series]: https://www.arction.com/lightningchart-js-api-documentation/v2.2.0/classes/segmentseries.html
+[Freeform line series]: https://www.arction.com/lightningchart-js-api-documentation/v2.2.0/classes/lineseries.html
+[Spline series]: https://www.arction.com/lightningchart-js-api-documentation/v2.2.0/classes/splineseries.html
+[Custom tick]: https://www.arction.com/lightningchart-js-api-documentation/v2.2.0/classes/customtick.html
+[Solid LineStyle]: https://www.arction.com/lightningchart-js-api-documentation/v2.2.0/classes/solidline.html
+[Empty LineStyle]: https://www.arction.com/lightningchart-js-api-documentation/v2.2.0/globals.html#emptyline
+[Solid FillStyle]: https://www.arction.com/lightningchart-js-api-documentation/v2.2.0/classes/solidfill.html
+[Empty FillStyle]: https://www.arction.com/lightningchart-js-api-documentation/v2.2.0/globals.html#emptyfill
+[Empty TickStyle]: https://www.arction.com/lightningchart-js-api-documentation/v2.2.0/globals.html#emptytick
+[Color palettes]: https://www.arction.com/lightningchart-js-api-documentation/v2.2.0/globals.html#colorpalettes
+[UI Panel]: https://www.arction.com/lightningchart-js-api-documentation/v2.2.0/classes/uipanel.html
+[UI Layout builders]: https://www.arction.com/lightningchart-js-api-documentation/v2.2.0/globals.html#uilayoutbuilders
+[UI Elements builders]: https://www.arction.com/lightningchart-js-api-documentation/v2.2.0/globals.html#uielementbuilders
+[Font settings]: https://www.arction.com/lightningchart-js-api-documentation/v2.2.0/classes/fontsettings.html
 
