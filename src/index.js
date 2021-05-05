@@ -84,16 +84,14 @@ const barChart = db.createChartXY({
 
 // Get Y axis
 const axisX = barChart.getDefaultAxisX()
-// Amount of pixels in chart area
-const axisXSize = axisX.scale.getCellSize()
 // Modify X axis
 axisX
     // Disable default ticks.
     .setTickStrategy(AxisTickStrategies.Empty)
     // Disable mouse interactions
     .setMouseInteractions(false)
-    // Set correct range, so that is in pixel coordinates
-    .setInterval(0, axisXSize, false, true)
+    // Set static Axis range.
+    .setInterval(0, 100, false, true)
     // Disable auto scaling
     .setScrollStrategy(undefined)
 
@@ -111,20 +109,15 @@ const numberOfGapsBetweenBars = teams.length + 1
 // Create custom ticks to mark positions of different departments bars
 const customTicks = teams.map((team, i) => axisX
     // Add new custom tick
-    .addCustomTick()
+    .addCustomTick(UIElementBuilders.AxisTick)
     // Set team name as marker text
     .setTextFormatter(_ => team)
     // Position custom tick in according with department index
-    .setValue(axisXSize / numberOfGapsBetweenBars * (i + 1))
+    .setValue(100 / numberOfGapsBetweenBars * (i + 1))
     // Style marker of custom tick
     .setMarker(marker => marker
         // Change font settings
-        .setFont(fs => fs.setSize(12))
-        // Change stroke style
-        .setBackground(background => background
-            .setStrokeStyle(emptyLine)
-            .setFillStyle(emptyFill)
-        )
+        .setTextFont(fs => fs.setSize(13))
         .setTextFillStyle(new SolidFill({ color: ColorRGBA(170, 170, 170) }))
     )
     // Disable gridstroke.
@@ -180,7 +173,7 @@ budgets.then(
     }
 )
 
-lineSeries.setResultTableFormatter((builder, series, Xvalue, Yvalue) => {
+lineSeries.setCursorResultTableFormatter((builder, series, Xvalue, Yvalue) => {
     // Find cached entry for the figure.
     return builder
         .addRow('Total expenses')
@@ -253,7 +246,7 @@ totalBudgetsPerTeam.then(teamCosts => {
             // Modify TextBox builder to style the text field
             .addStyler(textBox => textBox
                 // Define font settings for the text box
-                .setFont(fontSettings => fontSettings.setSize(75 / window.devicePixelRatio))
+                .setTextFont(fontSettings => fontSettings.setSize(75 / window.devicePixelRatio))
                 // Define content of the text box
                 .setText('$' + teamCosts.reduce((sum, cost) => sum + cost, 0).toFixed())
             )
@@ -265,7 +258,7 @@ totalBudgetsPerTeam.then(teamCosts => {
         UIElementBuilders.TextBox
             // Modify TextBox builder to style the text field
             .addStyler(textBox => textBox
-                .setFont(fontSettings => fontSettings.setSize(25 / window.devicePixelRatio))
+                .setTextFont(fontSettings => fontSettings.setSize(25 / window.devicePixelRatio))
                 .setText("Total company expenses")
             )
     )
@@ -314,7 +307,7 @@ budgets.then(teamBudgets => {
         // Add data
         .add(totalCostsPerDays)
 })
-totalCost.setResultTableFormatter((builder, series, Xvalue, Yvalue) => {
+totalCost.setCursorResultTableFormatter((builder, series, Xvalue, Yvalue) => {
     // Find cached entry for the figure.
     return builder
         .addRow('Total expenses')
