@@ -1,6 +1,6 @@
-# Dashboard Business
+# JavaScript Business Dashboard
 
-![Dashboard Business](dashboardBusiness.png)
+![JavaScript Business Dashboard](dashboardBusiness.png)
 
 This demo application belongs to the set of examples for LightningChart JS, data visualization library for JavaScript.
 
