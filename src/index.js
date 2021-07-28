@@ -17,7 +17,6 @@ const {
     emptyLine,
     emptyFill,
     AxisScrollStrategies,
-    ColorRGBA,
     Themes
 } = lcjs
 
@@ -55,7 +54,7 @@ const budgets = Promise.all(
 
 // Create dashboard which will host all chart and UI elements
 const db = lightningChart().Dashboard({
-    // theme: Themes.dark 
+    // theme: Themes.darkGold
     numberOfRows: 3,
     numberOfColumns: 2
 })
@@ -114,12 +113,6 @@ const customTicks = teams.map((team, i) => axisX
     .setTextFormatter(_ => team)
     // Position custom tick in according with department index
     .setValue(100 / numberOfGapsBetweenBars * (i + 1))
-    // Style marker of custom tick
-    .setMarker(marker => marker
-        // Change font settings
-        .setTextFont(fs => fs.setSize(13))
-        .setTextFillStyle(new SolidFill({ color: ColorRGBA(170, 170, 170) }))
-    )
     // Disable gridstroke.
     .setGridStrokeStyle(emptyLine)
 )
@@ -234,6 +227,10 @@ const column = db
     .addUIElement(UILayoutBuilders.Column)
     .setPosition({ x: 50, y: 50 })
     .setPadding({ right: 40 })
+    .setBackground((background) => background
+        .setFillStyle(emptyFill)
+        .setStrokeStyle(emptyLine)
+    )
 
 totalBudgetsPerTeam.then(teamCosts => {
     // Add the first row to the column
