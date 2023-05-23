@@ -24,6 +24,10 @@ const {
 
 const { createProgressiveTraceGenerator } = xydata
 
+// Decide on an origin for DateTime axes (shared between two charts).
+const dateOrigin = new Date(2018, 0, 1)
+const dateOriginTime = dateOrigin.getTime()
+
 // Department names
 const teams = ['Dev', 'Maintenance', 'Support', 'Sales', 'Marketing']
 // 1 data-point per day
@@ -35,10 +39,18 @@ const budgets = Promise.all(
             .setNumberOfPoints(365)
             .generate()
             .toPromise()
+            // Map random generated data to start from a particular date with the frequency of dataFrequency
             .then((data) =>
                 data.map((point) => ({
-                    x: point.x * pointResolution,
+                    x: dateOriginTime + point.x * pointResolution,
                     y: index > 0 ? Math.abs(point.y) * 100 + 100 : Math.abs(point.y) * 50 + 1800,
+                })),
+            )
+            // Shift the data by dateOriginTime
+            .then((data) =>
+                data.map((p) => ({
+                    x: p.x - dateOriginTime,
+                    y: p.y,
                 })),
             ),
     ),
@@ -114,9 +126,6 @@ const customTicks = teams.map((team, i) =>
         // Disable gridstroke.
         .setGridStrokeStyle(emptyLine),
 )
-
-// Decide on an origin for DateTime axes (shared between two charts).
-const dateOrigin = new Date(2018, 0, 1)
 
 // Create chart for a single department costs distribution graph
 const lineChart = db
