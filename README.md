@@ -150,7 +150,7 @@ Official [API documentation][1] can be found on [LightningChart][2] website.
 
 If the docs and other materials do not solve your problem as well as implementation help is needed, ask on [StackOverflow][3] (tagged lightningchart).
 
-If you think you found a bug in the LightningChart JavaScript library, please contact support@lightningchart.com.
+If you think you found a bug in the LightningChart JavaScript library, please contact sales@lightningchart.com.
 
 Direct developer email support can be purchased through a [Support Plan][4] or by contacting sales@lightningchart.com.
 
@@ -163,23 +163,23 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © LightningChart Ltd 2009-2022. All rights reserved.
 
 
-[Dashboard]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/classes/Dashboard.html
-[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/classes/ChartXY.html
-[Axis]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/classes/Axis.html
-[Axis tick strategies]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/variables/AxisTickStrategies.html
-[Auto cursor modes]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/enums/AutoCursorModes.html
-[Segment series]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/classes/SegmentSeries.html
-[Freeform line series]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/classes/LineSeries.html
-[Spline series]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/classes/SplineSeries.html
-[Custom tick]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/classes/CustomTick.html
-[Solid LineStyle]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/classes/SolidLine.html
-[Empty LineStyle]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/variables/emptyLine.html
-[Solid FillStyle]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/classes/SolidFill.html
-[Empty FillStyle]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/variables/emptyFill-1.html
-[Empty TickStyle]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/variables/emptyTick.html
-[Color palettes]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/variables/ColorPalettes.html
-[UI Panel]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/classes/UIPanel.html
-[UI Layout builders]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/variables/UILayoutBuilders.html
-[UI Elements builders]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/variables/UIElementBuilders.html
-[Font settings]: https://lightningchart.com/js-charts/api-documentation/v5.0.1/classes/FontSettings.html
+[Dashboard]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/classes/Dashboard.html
+[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/classes/ChartXY.html
+[Axis]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/classes/Axis.html
+[Axis tick strategies]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/variables/AxisTickStrategies.html
+[Auto cursor modes]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/enums/AutoCursorModes.html
+[Segment series]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/classes/SegmentSeries.html
+[Freeform line series]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/classes/LineSeries.html
+[Spline series]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/classes/SplineSeries.html
+[Custom tick]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/classes/CustomTick.html
+[Solid LineStyle]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/classes/SolidLine.html
+[Empty LineStyle]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/variables/emptyLine.html
+[Solid FillStyle]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/classes/SolidFill.html
+[Empty FillStyle]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/variables/emptyFill-1.html
+[Empty TickStyle]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/variables/emptyTick.html
+[Color palettes]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/variables/ColorPalettes.html
+[UI Panel]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/classes/UIPanel.html
+[UI Layout builders]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/variables/UILayoutBuilders.html
+[UI Elements builders]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/variables/UIElementBuilders.html
+[Font settings]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/classes/FontSettings.html
 
