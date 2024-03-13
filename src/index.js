@@ -59,7 +59,7 @@ const budgets = Promise.all(
 // Create dashboard which will host all chart and UI elements
 // NOTE: Using `Dashboard` is no longer recommended for new applications. Find latest recommendations here: https://lightningchart.com/js-charts/docs/basic-topics/grouping-charts/
 const db = lightningChart().Dashboard({
-    // theme: Themes.darkGold
+    theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined,
     numberOfRows: 3,
     numberOfColumns: 2,
 })
