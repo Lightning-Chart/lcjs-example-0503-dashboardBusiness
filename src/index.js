@@ -2,10 +2,10 @@
  * LightningChartJS example that showcases a business-like-Dashboard.
  */
 // Import LightningChartJS
-const lcjs = require('@arction/lcjs')
+const lcjs = require('@lightningchart/lcjs')
 
 // Import xydata
-const xydata = require('@arction/xydata')
+const xydata = require('@lightningchart/xydata')
 
 // Extract required parts from LightningChartJS.
 const {
@@ -87,7 +87,7 @@ const barChart = db
         rowSpan: 2,
     })
     // Disable auto cursor
-    .setAutoCursorMode(AutoCursorModes.disabled)
+    .setCursorMode(undefined)
     // Set correct chart title
     .setTitle('Total expenses for 2018 per department')
     // Disable mouse interactions
@@ -109,7 +109,7 @@ axisX
 // Modify Y axis
 barChart
     .getDefaultAxisY()
-    .setTitle('Expenses ($)')
+    .setTitle('Expenses').setUnits('$')
     .setStrokeStyle((style) => style.setThickness(0))
     .setNibStyle(emptyLine)
     .setMouseInteractions(false)
@@ -157,21 +157,12 @@ budgets.then((costsOfTeams) => {
     // Get Y axis
     lineChart
         .getDefaultAxisY()
-        .setTitle('Expenses ($)')
+        .setTitle('Expenses').setUnits('$')
         // Disable auto scaling
         .setScrollStrategy(AxisScrollStrategies.fitting)
         // Set Y scale interval so that costs distribution fits
         .setInterval({ start: 0, end: max, stopAxisAfter: false })
 })
-
-lineSeries.setCursorResultTableFormatter((builder, series, Xvalue, Yvalue) => {
-    // Find cached entry for the figure.
-    return builder
-        .addRow('Total expenses')
-        .addRow('Date: ' + series.axisX.formatValue(Xvalue))
-        .addRow('Expenses: $' + Yvalue.toFixed(2))
-})
-
 // Create interactive Bar chart
 Promise.all([totalBudgetsPerTeam, budgets]).then(([values, costsOfTeams]) => {
     // Create bar for each department
@@ -275,7 +266,7 @@ totalCostsChart.getDefaultAxisX().setTickStrategy(AxisTickStrategies.DateTime, (
 const totalCost = totalCostsChart
     // Add the smooth line
     .addSplineSeries()
-    .setName('Total Expenses ($)')
+    .setName('Total Expenses')
     // Change the thickness of the stroke
     .setStrokeStyle((strokeStyle) => strokeStyle.setThickness(2))
 
@@ -295,11 +286,4 @@ budgets.then((teamBudgets) => {
         // Add data
         .add(totalCostsPerDays)
 })
-totalCost.setCursorResultTableFormatter((builder, series, Xvalue, Yvalue) => {
-    // Find cached entry for the figure.
-    return builder
-        .addRow('Total expenses')
-        .addRow('Date: ' + series.axisX.formatValue(Xvalue))
-        .addRow('Expenses: $' + Yvalue.toFixed(2))
-})
-totalCostsChart.getDefaultAxisY().setTitle('Expenses ($)')
+totalCostsChart.getDefaultAxisY().setTitle('Expenses').setUnits('$')
