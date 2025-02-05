@@ -57,14 +57,6 @@ The dashboard grid is created with 4 rows and 2 columns. Some visualization comp
 
     Regarding the customization, each column can be configured to have individual styling and mouse & touch events. Each chart and series has mouse/touch events. Search in our API documentation by starting to type "onMouse".
 
-    ```javascript
-    // Configure the created bar column.
-    column
-        .setStrokeStyle( style => ... )
-        .onMouseEnter( () => pointerEnterHandler )
-        .onTouchEvent( () => pointerEnterHandler )
-    ```
-
 2. _Top-right cell, upper part._ This cell contains a UI panel that shows the total company costs for the whole year. UI panels are able to visualize only UI components. The chart fills 1 row & 1 column.
 
     ```javascript
@@ -163,23 +155,23 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © LightningChart Ltd 2009-2022. All rights reserved.
 
 
-[Dashboard]: https://lightningchart.com/js-charts/api-documentation/v6.1.0/classes/Dashboard.html
-[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v6.1.0/classes/ChartXY.html
-[Axis]: https://lightningchart.com/js-charts/api-documentation/v6.1.0/classes/Axis.html
-[Axis tick strategies]: https://lightningchart.com/js-charts/api-documentation/v6.1.0/variables/AxisTickStrategies.html
-[Auto cursor modes]: https://lightningchart.com/js-charts/api-documentation/v6.1.0/enums/AutoCursorModes.html
-[Segment series]: https://lightningchart.com/js-charts/api-documentation/v6.1.0/classes/SegmentSeries.html
-[Freeform line series]: https://lightningchart.com/js-charts/api-documentation/v6.1.0/classes/LineSeries.html
-[Spline series]: https://lightningchart.com/js-charts/api-documentation/v6.1.0/classes/SplineSeries.html
-[Custom tick]: https://lightningchart.com/js-charts/api-documentation/v6.1.0/classes/CustomTick.html
-[Solid LineStyle]: https://lightningchart.com/js-charts/api-documentation/v6.1.0/classes/SolidLine.html
-[Empty LineStyle]: https://lightningchart.com/js-charts/api-documentation/v6.1.0/variables/emptyLine.html
-[Solid FillStyle]: https://lightningchart.com/js-charts/api-documentation/v6.1.0/classes/SolidFill.html
-[Empty FillStyle]: https://lightningchart.com/js-charts/api-documentation/v6.1.0/variables/emptyFill-1.html
-[Empty TickStyle]: https://lightningchart.com/js-charts/api-documentation/v6.1.0/variables/emptyTick.html
-[Color palettes]: https://lightningchart.com/js-charts/api-documentation/v6.1.0/variables/ColorPalettes.html
-[UI Panel]: https://lightningchart.com/js-charts/api-documentation/v6.1.0/classes/UIPanel.html
-[UI Layout builders]: https://lightningchart.com/js-charts/api-documentation/v6.1.0/variables/UILayoutBuilders.html
-[UI Elements builders]: https://lightningchart.com/js-charts/api-documentation/v6.1.0/variables/UIElementBuilders.html
-[Font settings]: https://lightningchart.com/js-charts/api-documentation/v6.1.0/classes/FontSettings.html
+[Dashboard]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/classes/Dashboard.html
+[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/classes/ChartXY.html
+[Axis]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/classes/Axis.html
+[Axis tick strategies]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/variables/AxisTickStrategies.html
+[Auto cursor modes]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/enums/AutoCursorModes.html
+[Segment series]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/classes/SegmentSeries.html
+[Freeform line series]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/classes/LineSeries.html
+[Spline series]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/classes/SplineSeries.html
+[Custom tick]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/classes/CustomTick.html
+[Solid LineStyle]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/classes/SolidLine.html
+[Empty LineStyle]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/variables/emptyLine.html
+[Solid FillStyle]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/classes/SolidFill.html
+[Empty FillStyle]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/variables/emptyFill-1.html
+[Empty TickStyle]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/variables/emptyTick.html
+[Color palettes]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/variables/ColorPalettes.html
+[UI Panel]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/classes/UIPanel.html
+[UI Layout builders]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/variables/UILayoutBuilders.html
+[UI Elements builders]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/variables/UIElementBuilders.html
+[Font settings]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/classes/FontSettings.html
 

@@ -91,7 +91,7 @@ const barChart = db
     // Set correct chart title
     .setTitle('Total expenses for 2018 per department')
     // Disable mouse interactions
-    .setMouseInteractions(false)
+    .setUserInteractions(undefined)
 
 // Get Y axis
 const axisX = barChart.getDefaultAxisX()
@@ -99,8 +99,6 @@ const axisX = barChart.getDefaultAxisX()
 axisX
     // Disable default ticks.
     .setTickStrategy(AxisTickStrategies.Empty)
-    // Disable mouse interactions
-    .setMouseInteractions(false)
     // Set static Axis range.
     .setInterval({ start: 0, end: 100 })
     // Disable auto scaling
@@ -109,10 +107,9 @@ axisX
 // Modify Y axis
 barChart
     .getDefaultAxisY()
-    .setTitle('Expenses').setUnits('$')
+    .setTitle('Expenses')
+    .setUnits('$')
     .setStrokeStyle((style) => style.setThickness(0))
-    .setNibStyle(emptyLine)
-    .setMouseInteractions(false)
 // Create series for individual lines
 const bars = barChart.addSegmentSeries().setHighlightOnHover(false)
 // Calculate
@@ -131,20 +128,19 @@ const customTicks = teams.map((team, i) =>
 )
 
 // Create chart for a single department costs distribution graph
-const lineChart = db
-    .createChartXY({
-        columnIndex: 0,
-        rowIndex: 2,
-        columnSpan: 2,
-        rowSpan: 1,
-    })
-    .setPadding({ right: 40 })
+const lineChart = db.createChartXY({
+    columnIndex: 0,
+    rowIndex: 2,
+    columnSpan: 2,
+    rowSpan: 1,
+})
 // Set the row height for the third row to take 50% of view space.
 db.setRowHeight(2, 2)
 // Create simple line series
 const lineSeries = lineChart
-    .addLineSeries()
+    .addPointLineAreaSeries({ dataPattern: 'ProgressiveX' })
     .setName('Total Expenses')
+    .setAreaFillStyle(emptyFill)
     // Set selected fill color for the series
     .setStrokeStyle((style) => style.setFillStyle(selectedFillStyle))
 
@@ -157,7 +153,8 @@ budgets.then((costsOfTeams) => {
     // Get Y axis
     lineChart
         .getDefaultAxisY()
-        .setTitle('Expenses').setUnits('$')
+        .setTitle('Expenses')
+        .setUnits('$')
         // Disable auto scaling
         .setScrollStrategy(AxisScrollStrategies.fitting)
         // Set Y scale interval so that costs distribution fits
@@ -196,8 +193,7 @@ Promise.all([totalBudgetsPerTeam, budgets]).then(([values, costsOfTeams]) => {
     }
     // Attach event listener for mouse/touch events of each bar
     barCol.forEach((bar, i) => {
-        bar.onMouseEnter(() => selectedDepartment(i))
-        bar.onTouchStart(() => selectedDepartment(i))
+        bar.addEventListener('pointerenter', () => selectedDepartment(i))
     })
     // Select the first department at initial value
     selectedDepartment(0)
@@ -259,7 +255,6 @@ const totalCostsChart = db
     })
     // Specify ChartXY title
     .setTitle('Total expenses per day')
-    .setPadding({ right: 40 })
 
 totalCostsChart.getDefaultAxisX().setTickStrategy(AxisTickStrategies.DateTime, (tickStrategy) => tickStrategy.setDateOrigin(dateOrigin))
 
