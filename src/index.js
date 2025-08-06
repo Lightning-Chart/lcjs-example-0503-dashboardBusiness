@@ -85,6 +85,7 @@ const barChart = db
         rowIndex: 0,
         columnSpan: 1,
         rowSpan: 2,
+        legend: { visible: false },
     })
     // Disable auto cursor
     .setCursorMode(undefined)
@@ -133,14 +134,14 @@ const lineChart = db.createChartXY({
     rowIndex: 2,
     columnSpan: 2,
     rowSpan: 1,
+    legend: { visible: false },
 })
 // Set the row height for the third row to take 50% of view space.
 db.setRowHeight(2, 2)
 // Create simple line series
 const lineSeries = lineChart
-    .addPointLineAreaSeries({ dataPattern: 'ProgressiveX' })
+    .addLineSeries()
     .setName('Total Expenses')
-    .setAreaFillStyle(emptyFill)
     // Set selected fill color for the series
     .setStrokeStyle((style) => style.setFillStyle(selectedFillStyle))
 
@@ -183,7 +184,7 @@ Promise.all([totalBudgetsPerTeam, budgets]).then(([values, costsOfTeams]) => {
         // Remove points which belong to costs distribution of previously selected department
         lineSeries.clear()
         // Add points for costs distribution of newly selected department
-        lineSeries.add(costsOfTeams[i])
+        lineSeries.appendJSON(costsOfTeams[i])
         // Set main color to all bars
         barCol.forEach((bar) => bar.setStrokeStyle(mainStrokeStyle))
         customTicks.forEach((tick) => tick.setMarker((marker) => marker.setTextFont((font) => font.setWeight('normal'))))
@@ -252,6 +253,7 @@ const totalCostsChart = db
         rowIndex: 1,
         columnSpan: 1,
         rowSpan: 1,
+        legend: { visible: false },
     })
     // Specify ChartXY title
     .setTitle('Total expenses per day')
@@ -279,6 +281,6 @@ budgets.then((teamBudgets) => {
         // Hide points
         .setPointFillStyle(emptyFill)
         // Add data
-        .add(totalCostsPerDays)
+        .appendJSON(totalCostsPerDays)
 })
 totalCostsChart.getDefaultAxisY().setTitle('Expenses').setUnits('$')
